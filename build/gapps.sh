@@ -46,6 +46,8 @@ function create() {
     test -d $OUT/$GARCH || mkdir -p $OUT/$GARCH
     test -d $OUT/$GARCH/system || mkdir -p $OUT/$GARCH/system
     echo "Build directories are now ready" >> $GLOG
+    echo "Compiling RROs"
+    $TOP/overlay/build_overlays.sh $GARCH $OUT/$GARCH
     echo "Getting prebuilts..."
     echo "Copying stuff" >> $GLOG
     cp $TOP/toybox-$GARCH $OUT/$GARCH/toybox >> $GLOG

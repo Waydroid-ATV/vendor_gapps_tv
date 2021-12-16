@@ -43,6 +43,15 @@ write_headers "arm arm64"
 # Common gapps
 write_makefiles "$MY_DIR"/proprietary-files-common.txt
 
+# Overlays
+cd overlay
+OVERLAYS=$(for dir in $(ls -d */); do echo ${dir%%/}; done)
+OVERLAYS=$(echo $OVERLAYS | paste -s -d ' ')
+cd - >/dev/null
+printf "\n" >> "$PRODUCTMK"
+echo "PRODUCT_SOONG_NAMESPACES += vendor/$VENDOR/overlay" >> "$PRODUCTMK"
+echo "PRODUCT_PACKAGES += $OVERLAYS" >> "$PRODUCTMK"
+
 sed -i 's/TARGET_DEVICE/TARGET_ARCH/g' "$ANDROIDMK"
 
 # We are done with common
