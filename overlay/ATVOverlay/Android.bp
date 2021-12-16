@@ -1,4 +1,4 @@
 runtime_resource_overlay {
-    name: "GmsOverlay",
+    name: "ATVOverlay",
     product_specific: true
 }

@@ -25,3 +25,6 @@ PRODUCT_PACKAGES += \
     GoogleFeedback \
     GoogleOneTimeInitializer \
     GoogleServicesFramework
+
+PRODUCT_SOONG_NAMESPACES += vendor/gapps/overlay
+PRODUCT_PACKAGES += ATVOverlay

@@ -1,3 +1,0 @@
-<resources>
-    <string name="def_backup_transport">com.google.android.gms/.backup.BackupTransportService</string>
-</resources>
