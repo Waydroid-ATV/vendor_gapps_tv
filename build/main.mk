@@ -10,9 +10,17 @@ distclean:
 	@echo "Output removed! Ready for a clean build"
 
 gapps_tv_arm:
-	@echo "Compiling GApps for arm..."
-	@bash $(BUILD_GAPPS) arm 2>&1
+	@echo "Compiling GApps with GMS launcher for arm..."
+	@bash $(BUILD_GAPPS) arm full 2>&1
 
 gapps_tv_arm64:
-	@echo "Compiling GApps for arm64..."
-	@bash $(BUILD_GAPPS) arm64 2>&1
+	@echo "Compiling GApps with GMS launcher for arm64..."
+	@bash $(BUILD_GAPPS) arm64 full 2>&1
+
+gapps_tv_arm_minimal:
+	@echo "Compiling GApps without GMS Launcher for arm..."
+	@bash $(BUILD_GAPPS) arm minimal 2>&1
+
+gapps_tv_arm64_minimal:
+	@echo "Compiling GApps without GMS Launcher for arm64..."
+	@bash $(BUILD_GAPPS) arm64 minimal 2>&1

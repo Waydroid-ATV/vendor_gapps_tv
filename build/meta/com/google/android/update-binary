@@ -305,9 +305,19 @@ else
   cp --preserve=a -r ./system_ext/* "${SYSTEM_OUT}/system_ext/"
 fi
 
-rm -rf "${SYSTEM_OUT}/product/priv-app/TVLauncherNoGMS"
-rm -rf "${SYSTEM_OUT}/product/priv-app/TVRecommendationsNoGMS"
-rm -rf "${SYSTEM_OUT}/priv-app/PackageInstaller"
+if [ -n "$PRODUCT_BLOCK" ]; then
+  if [ -f "/product/priv-app/TVLauncher/TVLauncher.apk" ]; then
+    rm -rf "/product/priv-app/TVLauncherNoGMS"
+    rm -rf "/product/priv-app/TVRecommendationsNoGMS"
+  fi
+  rm -rf "/priv-app/PackageInstaller"
+else
+  if [ -f "${SYSTEM_OUT}/product/priv-app/TVLauncher/TVLauncher.apk" ]; then
+    rm -rf "${SYSTEM_OUT}/product/priv-app/TVLauncherNoGMS"
+    rm -rf "${SYSTEM_OUT}/product/priv-app/TVRecommendationsNoGMS"
+  fi
+  rm -rf "${SYSTEM_OUT}/priv-app/PackageInstaller"
+fi
 
 cleanup
 

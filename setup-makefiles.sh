@@ -43,6 +43,12 @@ write_headers "arm arm64"
 # Common gapps
 write_makefiles "$MY_DIR"/proprietary-files-common.txt
 
+# Gapps that force ads
+printf "\n" >> "$PRODUCTMK"
+echo "ifneq (\$(GMS_VARIANT),minimal)" >> "$PRODUCTMK"
+write_makefiles "$MY_DIR"/proprietary-files-common-full.txt
+echo "endif" >> "$PRODUCTMK"
+
 # Overlays
 cd overlay
 OVERLAYS=$(for dir in $(ls -d */); do echo ${dir%%/}; done)

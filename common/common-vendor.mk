@@ -29,11 +29,16 @@ PRODUCT_PACKAGES += \
     GoogleOneTimeInitializer \
     Katniss \
     SetupWraithPrebuilt \
-    TVLauncher \
-    TVRecommendations \
     Tubesky \
     GoogleFeedback \
     GoogleServicesFramework
+
+ifneq ($(GMS_VARIANT),minimal)
+
+PRODUCT_PACKAGES += \
+    TVLauncher \
+    TVRecommendations
+endif
 
 PRODUCT_SOONG_NAMESPACES += vendor/gapps_tv/overlay
 PRODUCT_PACKAGES += ATVOverlay

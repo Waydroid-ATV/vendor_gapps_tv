@@ -12,7 +12,7 @@ ANDROIDV=13.0.0
 SDKV=33
 GARCH=$1
 CPUARCH=$GARCH
-[ ! -z "$2" ] && CPUARCH=$2
+[ ! -z "$2" ] && VARIANT="-$2"
 OUT=$GAPPS_TOP/out
 BUILD=$GAPPS_TOP/build
 METAINF=$BUILD/meta
@@ -58,6 +58,10 @@ function create() {
     cp $GAPPS_TOP/toybox-$GARCH $OUT/$GARCH/toybox >> $GLOG
     cp -r $PREBUILT/* $OUT/$GARCH/system >> $GLOG
     cp -r $COMMON/* $OUT/$GARCH/system >> $GLOG
+    if [ "${VARIANT}" != "-full" ]; then
+      rm -rf $OUT/$GARCH/system/product/priv-app/TVLauncher
+      rm -rf $OUT/$GARCH/system/product/priv-app/TVRecommendations
+    fi
     echo "Generating addon.d script" >> $GLOG
     test -d $OUT/$GARCH/system/addon.d || mkdir -p $OUT/$GARCH/system/addon.d
     cp -f addond_head $OUT/$GARCH/system/addon.d
@@ -69,7 +73,7 @@ function create() {
 }
 
 function zipit() {
-    BUILDZIP=MindTheGapps-$ANDROIDV-$GARCH-ATV-$DATE.zip
+    BUILDZIP=MindTheGapps-$ANDROIDV-$GARCH-ATV$VARIANT-$DATE.zip
     echo "Importing installation scripts..."
     test -d $OUT/$GARCH/META-INF || mkdir $OUT/$GARCH/META-INF;
     cp -r $METAINF/* $OUT/$GARCH/META-INF/ && echo "Meta copied" >> $GLOG
