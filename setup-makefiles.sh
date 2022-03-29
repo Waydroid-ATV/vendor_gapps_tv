@@ -43,12 +43,6 @@ write_headers "arm arm64"
 # Common gapps
 write_makefiles "$MY_DIR"/proprietary-files-common.txt
 
-# Gapps that are too large for grouper
-printf "\n" >> "$PRODUCTMK"
-echo "ifeq (\$(TARGET_IS_GROUPER),)" >> "$PRODUCTMK"
-write_makefiles "$MY_DIR"/proprietary-files-common-nongrouper.txt
-echo "endif" >> "$PRODUCTMK"
-
 # Overlays
 cd overlay
 OVERLAYS=$(for dir in $(ls -d */); do echo ${dir%%/}; done)
@@ -72,12 +66,6 @@ setup_vendor "$DEVICE" "$VENDOR" "$ANDROID_ROOT"
 write_headers "$DEVICE"
 
 write_makefiles "$MY_DIR"/proprietary-files-$DEVICE.txt
-
-# Gapps that are too large for grouper
-printf "\n" >> "$PRODUCTMK"
-echo "ifeq (\$(TARGET_IS_GROUPER),)" >> "$PRODUCTMK"
-write_makefiles "$MY_DIR"/proprietary-files-$DEVICE-nongrouper.txt
-echo "endif" >> "$PRODUCTMK"
 
 printf '\n%s\n' "\$(call inherit-product, vendor/gapps/common/common-vendor.mk)" >> "$PRODUCTMK"
 

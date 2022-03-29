@@ -1,3 +1,2 @@
--product/priv-app/GmsCore/GmsCore.apk;PRESIGNED
--product/priv-app/Phonesky/Phonesky.apk;PRESIGNED
-product/lib/libjni_latinimegoogle.so|2eba28b0bc56c44aa89749cb4e2423068b9fcd4e
+-product/priv-app/AndroidMediaShell/AndroidMediaShell.apk;PRESIGNED
+-product/priv-app/PrebuiltGmsCore/PrebuiltGmsCorePano.apk;PRESIGNED

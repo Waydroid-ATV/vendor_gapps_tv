@@ -1,25 +1,38 @@
+# product
 -product/app/GoogleCalendarSyncAdapter/GoogleCalendarSyncAdapter.apk;PRESIGNED
--product/app/GoogleContactsSyncAdapter/GoogleContactsSyncAdapter.apk;PRESIGNED
--product/app/PrebuiltExchange3Google/PrebuiltExchange3Google.apk;PRESIGNED|043cb74798bf137d2dd1a69c7bca0a6702ad88a2
+-product/app/GoogleTTS/GoogleTTS.apk;PRESIGNED
+-product/app/talkback/talkback.apk;PRESIGNED
 
--product/priv-app/AndroidAutoStub/AndroidAutoStub.apk;PRESIGNED
--product/priv-app/GooglePartnerSetup/GooglePartnerSetup.apk;PRESIGNED
+product/etc/default-permissions/default-atv-permissions.xml
 
--product/framework/com.google.android.dialer.support.jar;PRESIGNED
-
-product/etc/default-permissions/default-permissions-google.xml
-
-product/etc/permissions/com.google.android.dialer.support.xml
-product/etc/permissions/privapp-permissions-google-product.xml
-
-product/etc/security/fsverity/gms_fsverity_cert.der
-
-product/etc/sysconfig/d2d_cable_migration_feature.xml
-system/etc/sysconfig/google-hiddenapi-package-allowlist.xml:product/etc/sysconfig/google-hiddenapi-package-allowlist.xml
+product/etc/permissions/privapp-permissions-google-p.xml
+product/etc/permissions/privapp-permissions-atv-product.xml
+product/etc/permissions/split-permissions-google.xml
+product/etc/sysconfig/google-hiddenapi-package-whitelist.xml
+product/etc/sysconfig/google-staged-installer-whitelist.xml
 product/etc/sysconfig/google.xml
-product/etc/sysconfig/google_build.xml|2547949ac40c1e921ae6e92de6a36f2a3a70802c
+product/etc/sysconfig/google_atv.xml
+
+-product/priv-app/AtvRemoteService/AtvRemoteService.apk;PRESIGNED
+-product/priv-app/AtvAxel/AtvAxel.apk;PRESIGNED
+-product/priv-app/Backdrop/Backdrop.apk;PRESIGNED
+-product/priv-app/GoogleOneTimeInitializer/GoogleOneTimeInitializer.apk;PRESIGNED
+-product/priv-app/Katniss/Katniss.apk;PRESIGNED
+-product/priv-app/SetupWraithPrebuilt/SetupWraithPrebuilt.apk;PRESIGNED
+-product/priv-app/Tubesky/Tubesky.apk;PRESIGNED
+-product/priv-app/TVLauncher/TVLauncher.apk;PRESIGNED
+-product/priv-app/TVRecommendations/TVRecommendations.apk;PRESIGNED
+
+# system
+-system/app/GoogleExtShared/GoogleExtShared.apk;PRESIGNED
+
+system/etc/permissions/privapp-permissions-google.xml
+
+-system/priv-app/GooglePackageInstaller/GooglePackageInstaller.apk;PRESIGNED
+
+# system_ext
+system_ext/etc/permissions/privapp-permissions-google-se.xml
 
 -system_ext/priv-app/GoogleFeedback/GoogleFeedback.apk;PRESIGNED
+-system_ext/priv-app/GooglePartnerSetup/GooglePartnerSetup.apk;PRESIGNED
 -system_ext/priv-app/GoogleServicesFramework/GoogleServicesFramework.apk;PRESIGNED
-
-system_ext/etc/permissions/privapp-permissions-google-system-ext.xml

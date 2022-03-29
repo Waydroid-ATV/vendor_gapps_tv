@@ -313,10 +313,6 @@ if [ -n "$SYSTEM_EXT_BLOCK" ]; then
   cp --preserve=a -r ./system_ext/* /system_ext
 fi
 
-if [ -e system_ext/priv-app/SetupWizard ] ; then
-  rm -rf "${SYSTEM_OUT}/system_ext/priv-app/Provision"
-fi
-
 cleanup
 
 ui_print "Done!"

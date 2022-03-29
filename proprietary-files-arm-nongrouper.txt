@@ -1,7 +1,0 @@
--product/app/MarkupGoogle/MarkupGoogle.apk;PRESIGNED|012bf4c0622d9d0aa4361a62e7ce07a1eb056b8f
--product/app/SpeechServicesByGoogle/SpeechServicesByGoogle.apk;PRESIGNED
--product/app/talkback/talkback.apk;PRESIGNED
--product/priv-app/Velvet/Velvet.apk;PRESIGNED
-product/app/MarkupGoogle/lib/arm/libsketchology_native.so|479720ba394500786e5b5a39deb09a93d5bce9db
-
--system_ext/priv-app/SetupWizard/SetupWizard.apk;OVERRIDES=Provision;PRESIGNED
