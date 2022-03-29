@@ -1,2 +1,0 @@
--product/priv-app/SetupWizardPrebuilt/SetupWizardPrebuilt.apk;PRESIGNED|3deb4081593c68ad034b3b8399b3dc8a7e8c4b12
--product/priv-app/Velvet/Velvet.apk;PRESIGNED|09bd04fac0b341bfcad00778438f1cee652dc5ee

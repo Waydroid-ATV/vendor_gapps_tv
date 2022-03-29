@@ -16,13 +16,10 @@ _make gapps_arm_
 _make gapps_arm64_
 - compile signed flashable GApps for arm64
 
-_make gapps_x86_
-- compile signed flashable GApps for x86
-
 Build inline with Android
 -------------------
 1. Sync this repo to $GAPPS_PATH where $GAPPS_PATH is the path to this repo
-2. Include $GAPPS_PATH/$ARCH/$ARCH-vendor.mk where $ARCH is arm, arm64, or x86 depending on the device's architecture
+2. Include $GAPPS_PATH/$ARCH/$ARCH-vendor.mk where $ARCH is arm, or arm64 depending on the device's architecture
 
 Explanation of pinned blobs
 -------------------
