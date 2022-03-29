@@ -16,11 +16,3 @@ gapps_arm:
 gapps_arm64:
 	@echo "Compiling GApps for arm64..."
 	@bash $(BUILD_GAPPS) arm64 aarch64 2>&1
-
-gapps_x86:
-	@echo "Compiling GApps for x86..."
-	@bash $(BUILD_GAPPS) x86 2>&1
-
-gapps_x86_64:
-	@echo "Compiling GApps for x86_64..."
-	@bash $(BUILD_GAPPS) x86_64 2>&1
