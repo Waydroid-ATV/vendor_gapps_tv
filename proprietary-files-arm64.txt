@@ -1,3 +1,2 @@
--product/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk;PRESIGNED|22d318755bbbbbb281da2847e447ce5af5c6dbc0
-product/lib/libjni_latinimegoogle.so|2eba28b0bc56c44aa89749cb4e2423068b9fcd4e
-product/lib64/libjni_latinimegoogle.so|84f9b1dc4c1b45f0c5ec9043b99a50c54e58ae1d
+-product/priv-app/AndroidMediaShell/AndroidMediaShell.apk;PRESIGNED
+-product/priv-app/PrebuiltGmsCorePano/PrebuiltGmsCorePano.apk;PRESIGNED

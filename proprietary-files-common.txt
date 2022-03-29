@@ -1,21 +1,22 @@
--product/app/GoogleCalendarSyncAdapter/GoogleCalendarSyncAdapter.apk;PRESIGNED|aa482580c87a43c83882c05a4757754917d47f32
--product/app/GoogleContactsSyncAdapter/GoogleContactsSyncAdapter.apk;PRESIGNED
--product/app/PrebuiltExchange3Google/PrebuiltExchange3Google.apk;PRESIGNED|043cb74798bf137d2dd1a69c7bca0a6702ad88a2
+-product/app/GoogleCalendarSyncAdapter/GoogleCalendarSyncAdapter.apk;PRESIGNED
+-product/app/talkback/talkback.apk;PRESIGNED
 
--product/priv-app/AndroidAutoStubPrebuilt/AndroidAutoStubPrebuilt.apk;PRESIGNED
--product/priv-app/PartnerSetupPrebuilt/PartnerSetupPrebuilt.apk;PRESIGNED
--product/priv-app/Phonesky/Phonesky.apk;PRESIGNED|da9f9699160f9499d127e0d995ea2ce9f4e51994
+-product/priv-app/AtvRemoteService/AtvRemoteService.apk;PRESIGNED
+-product/priv-app/Backdrop/Backdrop.apk;PRESIGNED
+-product/priv-app/Katniss/Katniss.apk;PRESIGNED
+-product/priv-app/SetupWraithPrebuilt/SetupWraithPrebuilt.apk;PRESIGNED
+-product/priv-app/SssAuthbridgePrebuilt/SssAuthbridgePrebuilt.apk;PRESIGNED
+-product/priv-app/Tubesky/Tubesky.apk;PRESIGNED
 
--product/framework/com.google.android.dialer.support.jar;PRESIGNED
-
-product/etc/permissions/com.google.android.dialer.support.xml
 product/etc/permissions/privapp-permissions-google-p.xml
+product/etc/permissions/privapp-permissions-atv-product.xml
 
 product/etc/sysconfig/google-hiddenapi-package-whitelist.xml
 product/etc/sysconfig/google.xml
-product/etc/sysconfig/google_build.xml
+product/etc/sysconfig/google_atv.xml
 
 -system_ext/priv-app/GoogleFeedback/GoogleFeedback.apk;PRESIGNED
+-system_ext/priv-app/GoogleOneTimeInitializer/GoogleOneTimeInitializer.apk;PRESIGNED
 -system_ext/priv-app/GoogleServicesFramework/GoogleServicesFramework.apk;PRESIGNED
 
 system_ext/etc/permissions/privapp-permissions-google-se.xml
