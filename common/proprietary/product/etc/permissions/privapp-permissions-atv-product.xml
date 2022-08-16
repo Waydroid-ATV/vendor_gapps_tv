@@ -16,6 +16,14 @@
   -->
 
 <permissions>
+    <privapp-permissions package="com.google.android.tv.axel">
+        <permission name="android.permission.HDMI_CEC" />
+        <permission name="android.permission.MEDIA_CONTENT_CONTROL" />
+        <permission name="android.permission.MODIFY_AUDIO_ROUTING" />
+        <permission name="android.permission.START_FOREGROUND_SERVICES_FROM_BACKGROUND" />
+        <permission name="android.permission.WRITE_SECURE_SETTINGS" />
+    </privapp-permissions>
+
     <privapp-permissions package="com.google.android.tv.remote.service">
         <permission name="android.permission.ACCESS_COARSE_LOCATION"/>
         <permission name="android.permission.BLUETOOTH_PRIVILEGED"/>
@@ -31,7 +39,10 @@
         <permission name="android.permission.READ_DREAM_STATE" />
         <permission name="android.permission.READ_EXTERNAL_STORAGE"/>
         <permission name="android.permission.READ_LOGS"/>
+        <permission name="android.permission.START_ACTIVITIES_FROM_BACKGROUND" />
+        <permission name="android.permission.START_FOREGROUND_SERVICES_FROM_BACKGROUND" />
         <permission name="android.permission.TV_VIRTUAL_REMOTE_CONTROLLER"/>
+        <permission name="android.permission.UPDATE_APP_OPS_STATS"/>
         <permission name="android.permission.WRITE_DREAM_STATE" />
         <permission name="android.permission.WRITE_EXTERNAL_STORAGE"/>
         <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
@@ -70,7 +81,7 @@
         <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
     </privapp-permissions>
 
-     <privapp-permissions package="com.google.android.tv.assistant">
+    <privapp-permissions package="com.google.android.tv.assistant">
         <permission name="android.permission.CONTROL_DEVICE_LIGHTS"/>
     </privapp-permissions>
 
@@ -126,6 +137,7 @@
         <permission name="android.permission.BLUETOOTH_PRIVILEGED" />
         <permission name="android.permission.CHANGE_COMPONENT_ENABLED_STATE"/>
         <permission name="android.permission.CHANGE_CONFIGURATION"/>
+        <permission name="android.permission.DISPATCH_PROVISIONING_MESSAGE"/>
         <permission name="android.permission.GET_ACCOUNTS_PRIVILEGED"/>
         <permission name="android.permission.HDMI_CEC"/>
         <permission name="android.permission.INTERACT_ACROSS_USERS"/>
@@ -150,5 +162,13 @@
     <privapp-permissions package="com.google.android.apps.nbu.smartconnect.tv">
         <permission name="android.permission.CONTROL_VPN"/>
         <permission name="android.permission.REAL_GET_TASKS"/>
+        <permission name="android.permission.PACKAGE_USAGE_STATS"/>
     </privapp-permissions>
+
+    <privapp-permissions package="com.google.android.apps.tv.netoscope">
+        <permission name="android.permission.DUMP"/>
+        <permission name="android.permission.LOCATION_HARDWARE"/>
+        <permission name="android.permission.WIFI_UPDATE_USABILITY_STATS_SCORE"/>
+    </privapp-permissions>
+
 </permissions>

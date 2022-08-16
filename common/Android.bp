@@ -6,9 +6,41 @@ soong_namespace {
 }
 
 android_app_import {
+	name: "GoogleExtShared",
+	owner: "gapps_tv",
+	apk: "proprietary/system/app/GoogleExtShared/GoogleExtShared.apk",
+	presigned: true,
+	dex_preopt: {
+		enabled: false,
+	},
+}
+
+android_app_import {
+	name: "GooglePackageInstaller",
+	owner: "gapps_tv",
+	apk: "proprietary/system/priv-app/GooglePackageInstaller/GooglePackageInstaller.apk",
+	presigned: true,
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+}
+
+android_app_import {
 	name: "GoogleCalendarSyncAdapter",
 	owner: "gapps_tv",
 	apk: "proprietary/product/app/GoogleCalendarSyncAdapter/GoogleCalendarSyncAdapter.apk",
+	presigned: true,
+	dex_preopt: {
+		enabled: false,
+	},
+	product_specific: true,
+}
+
+android_app_import {
+	name: "GoogleTTS",
+	owner: "gapps_tv",
+	apk: "proprietary/product/app/GoogleTTS/GoogleTTS.apk",
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
@@ -28,6 +60,18 @@ android_app_import {
 }
 
 android_app_import {
+	name: "AtvAxel",
+	owner: "gapps_tv",
+	apk: "proprietary/product/priv-app/AtvAxel/AtvAxel.apk",
+	presigned: true,
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+	product_specific: true,
+}
+
+android_app_import {
 	name: "AtvRemoteService",
 	owner: "gapps_tv",
 	apk: "proprietary/product/priv-app/AtvRemoteService/AtvRemoteService.apk",
@@ -43,6 +87,18 @@ android_app_import {
 	name: "Backdrop",
 	owner: "gapps_tv",
 	apk: "proprietary/product/priv-app/Backdrop/Backdrop.apk",
+	presigned: true,
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+	product_specific: true,
+}
+
+android_app_import {
+	name: "GoogleOneTimeInitializer",
+	owner: "gapps_tv",
+	apk: "proprietary/product/priv-app/GoogleOneTimeInitializer/GoogleOneTimeInitializer.apk",
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
@@ -76,9 +132,21 @@ android_app_import {
 }
 
 android_app_import {
-	name: "SssAuthbridgePrebuilt",
+	name: "TVLauncher",
 	owner: "gapps_tv",
-	apk: "proprietary/product/priv-app/SssAuthbridgePrebuilt/SssAuthbridgePrebuilt.apk",
+	apk: "proprietary/product/priv-app/TVLauncher/TVLauncher.apk",
+	presigned: true,
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+	product_specific: true,
+}
+
+android_app_import {
+	name: "TVRecommendations",
+	owner: "gapps_tv",
+	apk: "proprietary/product/priv-app/TVRecommendations/TVRecommendations.apk",
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
@@ -112,9 +180,9 @@ android_app_import {
 }
 
 android_app_import {
-	name: "GoogleOneTimeInitializer",
+	name: "GooglePartnerSetup",
 	owner: "gapps_tv",
-	apk: "proprietary/system_ext/priv-app/GoogleOneTimeInitializer/GoogleOneTimeInitializer.apk",
+	apk: "proprietary/system_ext/priv-app/GooglePartnerSetup/GooglePartnerSetup.apk",
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
