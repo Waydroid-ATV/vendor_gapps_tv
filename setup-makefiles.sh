@@ -19,7 +19,7 @@
 set -e
 
 export DEVICE_COMMON=common
-export VENDOR=gapps
+export VENDOR=gapps_tv
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
@@ -67,7 +67,7 @@ write_headers "$DEVICE"
 
 write_makefiles "$MY_DIR"/proprietary-files-$DEVICE.txt
 
-printf '\n%s\n' "\$(call inherit-product, vendor/gapps/common/common-vendor.mk)" >> "$PRODUCTMK"
+printf '\n%s\n' "\$(call inherit-product, vendor/gapps_tv/common/common-vendor.mk)" >> "$PRODUCTMK"
 
 sed -i 's/TARGET_DEVICE/TARGET_ARCH/g' "$ANDROIDMK"
 
