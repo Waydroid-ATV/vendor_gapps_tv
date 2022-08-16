@@ -19,7 +19,7 @@
 set -e
 
 export GAPPS_COMMON=common
-export VENDOR=gapps
+export VENDOR=gapps_tv
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
