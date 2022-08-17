@@ -313,6 +313,11 @@ if [ -n "$SYSTEM_EXT_BLOCK" ]; then
   cp --preserve=a -r ./system_ext/* /system_ext
 fi
 
+if [ -e product/priv-app/TVLauncher ] ; then
+  rm -rf "${SYSTEM_OUT}/product/priv-app/TVLauncherNoGMS"
+  rm -rf "${SYSTEM_OUT}/product/priv-app/TVRecommendationsNoGMS"
+fi
+
 cleanup
 
 ui_print "Done!"

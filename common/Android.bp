@@ -136,6 +136,7 @@ android_app_import {
 	owner: "gapps_tv",
 	apk: "proprietary/product/priv-app/TVLauncher/TVLauncher.apk",
 	presigned: true,
+	overrides: ["TVLauncherNoGMS"],
 	dex_preopt: {
 		enabled: false,
 	},
@@ -148,6 +149,7 @@ android_app_import {
 	owner: "gapps_tv",
 	apk: "proprietary/product/priv-app/TVRecommendations/TVRecommendations.apk",
 	presigned: true,
+	overrides: ["TVRecommendationsNoGMS"],
 	dex_preopt: {
 		enabled: false,
 	},
