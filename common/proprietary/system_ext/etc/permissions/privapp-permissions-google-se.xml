@@ -208,8 +208,4 @@ It allows additional grants on top of privapp-permissions-platform.xml
     <privapp-permissions package="com.google.android.turboadapter">
         <permission name="android.permission.DUMP"/>
     </privapp-permissions>
-
-    <privapp-permissions package="com.google.android.onetimeinitializer">
-        <permission name="android.permission.CHANGE_COMPONENT_ENABLED_STATE"/>
-    </privapp-permissions>
 </permissions>
