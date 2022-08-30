@@ -25,20 +25,6 @@ getprop2() {
   grep -m 1 "^$2=" $1 | cut -d= -f2
 }
 
-nice_arch() {
-  case $1 in
-    aarch64*|armv8*)
-      echo "arm64"
-      ;;
-    arm*)
-      echo "arm"
-      ;;
-    *)
-      echo $1
-      ;;
-  esac
-}
-
 cleanup() {
   ui_print "Cleaning up files"
   rm -rf $TMP/system
@@ -142,9 +128,9 @@ rm -rf META-INF
 # compiled for a different architecture. Just hope that all environments have at least
 # a proper `grep` and `uname`.
 GAPPS_ARCH=$(getprop2 $TMP/build.prop arch)
-CPU_ARCH=$(uname -m)
+CPU_ARCH=$(getprop ro.bionic.arch)
 if [ $GAPPS_ARCH != $CPU_ARCH ]; then
-  error "This package is built for $(nice_arch $GAPPS_ARCH) but your device is $(nice_arch $CPU_ARCH)! Aborting"
+  error "This package is built for $GAPPS_ARCH but your device is $CPU_ARCH! Aborting"
 fi
 
 ui_print "Setting up environment"

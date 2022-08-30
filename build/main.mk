@@ -11,8 +11,8 @@ distclean:
 
 gapps_tv_arm:
 	@echo "Compiling GApps for arm..."
-	@bash $(BUILD_GAPPS) arm armv7l 2>&1
+	@bash $(BUILD_GAPPS) arm 2>&1
 
 gapps_tv_arm64:
 	@echo "Compiling GApps for arm64..."
-	@bash $(BUILD_GAPPS) arm64 aarch64 2>&1
+	@bash $(BUILD_GAPPS) arm64 2>&1
