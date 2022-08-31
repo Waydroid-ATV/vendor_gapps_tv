@@ -13,7 +13,7 @@ OVERLAYS=$(for dir in $(ls -d */); do echo ${dir%%/}; done)
 croot 2>/dev/null || cd ../../../
 
 source build/envsetup.sh
-breakfast gapps_$GARCH
+breakfast gapps_tv_$GARCH
 m installclean
 mkdir -p $OUT   # $OUT may not exist yet, but we need to start creating the log file now
 m $OVERLAYS | tee $OUT/.log
