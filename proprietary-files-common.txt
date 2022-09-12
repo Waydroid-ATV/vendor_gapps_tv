@@ -28,7 +28,7 @@ product/etc/sysconfig/google_atv.xml
 
 system/etc/permissions/privapp-permissions-google-system.xml
 
--system/priv-app/GooglePackageInstaller/GooglePackageInstaller.apk;PRESIGNED
+-system/priv-app/GooglePackageInstaller/GooglePackageInstaller.apk;PRESIGNED;OVERRIDES=PackageInstaller
 
 # system_ext
 system_ext/etc/permissions/privapp-permissions-google-system_ext.xml

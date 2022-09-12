@@ -20,6 +20,7 @@ android_app_import {
 	owner: "gapps_tv",
 	apk: "proprietary/system/priv-app/GooglePackageInstaller/GooglePackageInstaller.apk",
 	presigned: true,
+	overrides: ["PackageInstaller"],
 	dex_preopt: {
 		enabled: false,
 	},
