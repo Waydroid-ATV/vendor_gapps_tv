@@ -70,15 +70,17 @@
 
     <privapp-permissions package="com.google.android.apps.mediashell">
         <permission name="android.permission.ACCESS_DRM_CERTIFICATES"/>
+        <permission name="android.permission.DUMP"/>
         <permission name="android.permission.HDMI_CEC"/>
+        <permission name="android.permission.INTERACT_ACROSS_USERS"/>
         <permission name="android.permission.LOCAL_MAC_ADDRESS"/>
         <permission name="android.permission.MEDIA_CONTENT_CONTROL"/>
         <permission name="android.permission.MODIFY_AUDIO_ROUTING"/>
         <permission name="android.permission.PACKAGE_USAGE_STATS"/>
-        <permission name="android.permission.RECORD_AUDIO"/>
         <permission name="android.permission.START_ACTIVITIES_FROM_BACKGROUND"/>
         <permission name="android.permission.USER_ACTIVITY"/>
         <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+        <permission name="android.permission.WRITE_SETTINGS"/>
     </privapp-permissions>
 
     <privapp-permissions package="com.google.android.tv.assistant">

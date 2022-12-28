@@ -94,6 +94,7 @@
          even after user setup is complete. The defined component should be used for supervision purposes
          only. The component must be part of a system app. -->
     <string name="config_defaultSupervisionProfileOwnerComponent" translatable="false">com.google.android.gms/.kids.account.receiver.ProfileOwnerReceiver</string>
+    <string name="config_systemSupervision">com.google.android.gms.supervision</string>
 
     <string-array name="config_integrityRuleProviderPackages" translatable="false">
       <item>com.android.vending</item>
@@ -120,4 +121,10 @@
 
     <!-- The name of the package that will hold the speech recognizer role by default. -->
     <string name="config_systemSpeechRecognizer" translatable="false">com.google.android.tts</string>
+
+    <string name="config_servicesExtensionPackage">com.google.android.ext.services</string>
+
+    <string name="config_appsAuthorizedForSharedAccounts">;com.android.vending;com.android.settings;com.android.tv.settings;</string>
+    <string name="config_chooseAccountActivity">com.google.android.gms/.common.account.NoTouchAccountPickerActivity</string>
+    <string name="config_chooseTypeAndAccountActivity">com.google.android.gms/.common.account.NoTouchAccountPickerActivity</string>
 </resources>

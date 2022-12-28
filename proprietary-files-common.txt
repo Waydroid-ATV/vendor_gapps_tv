@@ -5,7 +5,7 @@
 
 product/etc/default-permissions/default-atv-permissions.xml
 
-product/etc/permissions/privapp-permissions-google-product.xml
+product/etc/permissions/privapp-permissions-google-p.xml
 product/etc/permissions/privapp-permissions-atv-product.xml
 product/etc/permissions/split-permissions-google.xml
 product/etc/sysconfig/google-hiddenapi-package-whitelist.xml
@@ -14,7 +14,6 @@ product/etc/sysconfig/google.xml
 product/etc/sysconfig/google_atv.xml
 
 -product/priv-app/AtvRemoteService/AtvRemoteService.apk;PRESIGNED
--product/priv-app/AtvAxel/AtvAxel.apk;PRESIGNED
 -product/priv-app/Backdrop/Backdrop.apk;PRESIGNED
 -product/priv-app/GoogleOneTimeInitializer/GoogleOneTimeInitializer.apk;PRESIGNED
 -product/priv-app/Katniss/Katniss.apk;PRESIGNED
@@ -26,13 +25,12 @@ product/etc/sysconfig/google_atv.xml
 # system
 -system/app/GoogleExtShared/GoogleExtShared.apk;PRESIGNED
 
-system/etc/permissions/privapp-permissions-google-system.xml
+system/etc/permissions/privapp-permissions-google.xml:system/etc/permissions/privapp-permissions-google-system.xml
 
 -system/priv-app/GooglePackageInstaller/GooglePackageInstaller.apk;PRESIGNED;OVERRIDES=PackageInstaller
 
 # system_ext
-system_ext/etc/permissions/privapp-permissions-google-system_ext.xml
+system_ext/etc/permissions/privapp-permissions-google-se.xml
 
 -system_ext/priv-app/GoogleFeedback/GoogleFeedback.apk;PRESIGNED
--system_ext/priv-app/GooglePartnerSetup/GooglePartnerSetup.apk;PRESIGNED
 -system_ext/priv-app/GoogleServicesFramework/GoogleServicesFramework.apk;PRESIGNED
