@@ -8,8 +8,8 @@
 #
 DATE=$(date -u +%Y%m%d_%H%M%S)
 TOP=$(realpath .)
-ANDROIDV=12.1.0
-SDKV=32
+ANDROIDV=13.0.0
+SDKV=33
 GARCH=$1
 CPUARCH=$GARCH
 [ ! -z "$2" ] && CPUARCH=$2
