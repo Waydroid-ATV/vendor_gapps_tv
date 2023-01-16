@@ -305,7 +305,7 @@ if [ -e product/priv-app/TVLauncher ] ; then
 fi
 
 if [ -e system/priv-app/GooglePackageInstaller ] ; then
-  rm -rf "${SYSTEM_OUT}/system/priv-app/GooglePackageInstaller"
+  rm -rf "${SYSTEM_OUT}/system/priv-app/PackageInstaller"
 fi
 
 cleanup
