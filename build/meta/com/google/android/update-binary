@@ -299,14 +299,9 @@ if [ -n "$SYSTEM_EXT_BLOCK" ]; then
   cp --preserve=a -r ./system_ext/* /system_ext
 fi
 
-if [ -e product/priv-app/TVLauncher ] ; then
-  rm -rf "${SYSTEM_OUT}/product/priv-app/TVLauncherNoGMS"
-  rm -rf "${SYSTEM_OUT}/product/priv-app/TVRecommendationsNoGMS"
-fi
-
-if [ -e system/priv-app/PackageInstaller ] ; then
-  rm -rf "${SYSTEM_OUT}/system/priv-app/PackageInstaller"
-fi
+rm -rf "${SYSTEM_OUT}/product/priv-app/TVLauncherNoGMS"
+rm -rf "${SYSTEM_OUT}/product/priv-app/TVRecommendationsNoGMS"
+rm -rf "${SYSTEM_OUT}/priv-app/PackageInstaller"
 
 cleanup
 
