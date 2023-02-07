@@ -292,6 +292,8 @@ done
 
 ui_print "Copying files"
 cp --preserve=a -r ./system/* "${SYSTEM_OUT}/"
+cp addon.d/30-gapps.sh "${SYSTEM_OUT}/addon.d/"
+
 if [ -n "$PRODUCT_BLOCK" ]; then
   cp --preserve=a -r ./product/* /product
 fi
