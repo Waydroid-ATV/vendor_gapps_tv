@@ -290,9 +290,13 @@ ui_print "Copying files"
 cp --preserve=a -r ./* "${SYSTEM_OUT}/"
 if [ -n "$PRODUCT_BLOCK" ]; then
   cp --preserve=a -r ./product/* /product
+else
+  cp --preserve=a -r ./product/* "${SYSTEM_OUT}/product/"
 fi
 if [ -n "$SYSTEM_EXT_BLOCK" ]; then
   cp --preserve=a -r ./system_ext/* /system_ext
+else
+  cp --preserve=a -r ./system_ext/* "${SYSTEM_OUT}/system_ext/"
 fi
 
 cleanup
