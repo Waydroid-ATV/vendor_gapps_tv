@@ -26,3 +26,21 @@ FILES=$(echo $LOC | tr " " "\n" | sed "s#.*${RELOUT}##" | sort | uniq)
 for TARGET in $FILES; do
     mkdir -p $(dirname $GOUT/$TARGET) && cp $OUT/$TARGET $GOUT/$TARGET
 done
+
+# Generate temporary signing keys
+PRIVATE_KEY=$(mktemp)
+PRIVATE_KEY_PK8=$(mktemp)
+PUBLIC_KEY_PEM=$(mktemp)
+
+openssl genrsa -f4 2048 > $PRIVATE_KEY
+openssl pkcs8 -in $PRIVATE_KEY -topk8 -outform DER -out $PRIVATE_KEY_PK8 -nocrypt
+openssl req -new -x509 -sha256 -key $PRIVATE_KEY -out $PUBLIC_KEY_PEM -days 10000 -subj '/C=US/ST=California/L=Mountain View/O=Android/OU=Android/CN=Android/emailAddress=android@android.com'
+
+# Resign all overlay apks
+for TARGET in $FILES; do
+    java -Xmx2048m -jar $TOP/build/sign/signapk.jar $PUBLIC_KEY_PEM $PRIVATE_KEY_PK8 $GOUT/$TARGET $GOUT/${TARGET}.signed
+    mv $GOUT/$TARGET.signed $GOUT/$TARGET
+done
+
+# RIP
+rm $PRIVATE_KEY $PRIVATE_KEY_PK8 $PUBLIC_KEY_PEM

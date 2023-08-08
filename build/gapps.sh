@@ -7,7 +7,7 @@
 # var
 #
 DATE=$(date -u +%Y%m%d_%H%M%S)
-TOP=$(realpath .)
+export TOP=$(realpath .)
 ANDROIDV=13.0.0
 SDKV=33
 GARCH=$1
