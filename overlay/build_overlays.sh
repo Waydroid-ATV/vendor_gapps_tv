@@ -38,8 +38,8 @@ openssl req -new -x509 -sha256 -key $PRIVATE_KEY -out $PUBLIC_KEY_PEM -days 1000
 
 # Resign all overlay apks
 for TARGET in $FILES; do
-    java -Xmx2048m -jar $TOP/build/sign/signapk.jar $PUBLIC_KEY_PEM $PRIVATE_KEY_PK8 $GOUT/$TARGET $GOUT/${TARGET}.signed
-    mv $GOUT/$TARGET.signed $GOUT/$TARGET
+    java -Xmx2048m -jar $TOP/build/sign/apksigner.jar sign --key $PRIVATE_KEY_PK8 --cert $PUBLIC_KEY_PEM $GOUT/$TARGET
+    rm $GOUT/$TARGET.idsig
 done
 
 # RIP
