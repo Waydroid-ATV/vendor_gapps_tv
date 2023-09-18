@@ -7,6 +7,7 @@ PRODUCT_SOONG_NAMESPACES += \
 
 PRODUCT_COPY_FILES += \
     vendor/gapps_tv/common/proprietary/product/etc/default-permissions/default-atv-permissions.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/default-permissions/default-atv-permissions.xml \
+    vendor/gapps_tv/common/proprietary/product/etc/init/gapps.rc:$(TARGET_COPY_OUT_PRODUCT)/etc/init/gapps.rc \
     vendor/gapps_tv/common/proprietary/product/etc/permissions/privapp-permissions-atv-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-atv-product.xml \
     vendor/gapps_tv/common/proprietary/product/etc/permissions/privapp-permissions-google-p.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-google-p.xml \
     vendor/gapps_tv/common/proprietary/product/etc/permissions/split-permissions-google.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/split-permissions-google.xml \

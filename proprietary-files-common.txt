@@ -5,6 +5,8 @@
 
 product/etc/default-permissions/default-atv-permissions.xml
 
+product/etc/init/gapps.rc|1b9e076965fe08a03cf90fed0e96f2aa4ac90c0e
+
 product/etc/permissions/privapp-permissions-google-p.xml
 product/etc/permissions/privapp-permissions-atv-product.xml
 product/etc/permissions/split-permissions-google.xml
