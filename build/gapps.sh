@@ -7,18 +7,23 @@
 # var
 #
 DATE=$(date -u +%Y%m%d_%H%M%S)
-export TOP=$(realpath .)
+export GAPPS_TOP=$(realpath .)
 ANDROIDV=13.0.0
 SDKV=33
 GARCH=$1
 CPUARCH=$GARCH
 [ ! -z "$2" ] && CPUARCH=$2
-OUT=$TOP/out
-BUILD=$TOP/build
+OUT=$GAPPS_TOP/out
+BUILD=$GAPPS_TOP/build
 METAINF=$BUILD/meta
-COMMON=$TOP/common/proprietary
-GLOG=$TOP/gapps_log
-ADDOND=$TOP/addond.sh
+COMMON=$GAPPS_TOP/common/proprietary
+export GLOG=$GAPPS_TOP/gapps_log
+ADDOND=$GAPPS_TOP/addond.sh
+
+SIGNAPK=$GAPPS_TOP/build/sign/signapk.jar
+
+ZIP_KEY_PK8=$GAPPS_TOP/build/sign/testkey.pk8
+ZIP_KEY_PEM=$GAPPS_TOP/build/sign/testkey.x509.pem
 
 ##
 # functions
@@ -41,16 +46,16 @@ function create() {
     echo "ARCH= $GARCH" >> $GLOG
     echo "OS= $(uname -s -r)" >> $GLOG
     echo "NAME= $(whoami) at $(uname -n)" >> $GLOG
-    PREBUILT=$TOP/$GARCH/proprietary
+    PREBUILT=$GAPPS_TOP/$GARCH/proprietary
     test -d $OUT || mkdir $OUT;
     test -d $OUT/$GARCH || mkdir -p $OUT/$GARCH
     test -d $OUT/$GARCH/system || mkdir -p $OUT/$GARCH/system
     echo "Build directories are now ready" >> $GLOG
     echo "Compiling RROs"
-    $TOP/overlay/build_overlays.sh $GARCH $OUT/$GARCH
+    $GAPPS_TOP/overlay/build_overlays.sh $GARCH $OUT/$GARCH
     echo "Getting prebuilts..."
     echo "Copying stuff" >> $GLOG
-    cp $TOP/toybox-$GARCH $OUT/$GARCH/toybox >> $GLOG
+    cp $GAPPS_TOP/toybox-$GARCH $OUT/$GARCH/toybox >> $GLOG
     cp -r $PREBUILT/* $OUT/$GARCH/system >> $GLOG
     cp -r $COMMON/* $OUT/$GARCH/system >> $GLOG
     echo "Generating addon.d script" >> $GLOG
@@ -72,10 +77,10 @@ function zipit() {
     cd $OUT/$GARCH
     zip -r /tmp/$BUILDZIP . >> $GLOG
     rm -rf $OUT/tmp >> $GLOG
-    cd $TOP
+    cd $GAPPS_TOP
     if [ -f /tmp/$BUILDZIP ]; then
         echo "Signing zip..."
-        java -Xmx2048m -jar $TOP/build/sign/signapk.jar -w $TOP/build/sign/testkey.x509.pem $TOP/build/sign/testkey.pk8 /tmp/$BUILDZIP $OUT/$BUILDZIP >> $GLOG
+        java -Xmx2048m -jar $SIGNAPK -w $ZIP_KEY_PEM $ZIP_KEY_PK8 /tmp/$BUILDZIP $OUT/$BUILDZIP >> $GLOG
     else
         echo "Couldn't zip files!"
         echo "Couldn't find unsigned zip file, aborting" >> $GLOG
@@ -103,7 +108,7 @@ function getmd5() {
 if [ -x $(which realpath) ]; then
     echo "Realpath found!" >> $GLOG
 else
-    TOP=$(cd . && pwd) # some darwin love
+    GAPPS_TOP=$(cd . && pwd) # some darwin love
     echo "No realpath found!" >> $GLOG
 fi
 
