@@ -21,7 +21,10 @@ for OVERLAY in $OVERLAYS; do
     OVERLAY_TARGET_DIR="$GOUT/system/$PARTITION/overlay/"
     OVERLAY_TARGET="$OVERLAY_TARGET_DIR/$OVERLAY.apk"
     test -d $OVERLAY_TARGET_DIR || mkdir -p $OVERLAY_TARGET_DIR
-    java -Xmx2048m -jar $APKTOOL b $OVERLAY -o $OVERLAY_TARGET --use-aapt2 >> $GLOG 2>&1
+    java -Xmx2048m -jar $APKTOOL b $OVERLAY --use-aapt2 >> $GLOG 2>&1
+    zip -j $OVERLAY_TARGET -n .arsc \
+        $OVERLAY/build/apk/resources.arsc \
+        $OVERLAY/build/apk/AndroidManifest.xml >> $GLOG 2>&1
     java -Xmx2048m -jar $APKSIGNER sign --key $APK_KEY_PK8 --cert $APK_KEY_PEM $OVERLAY_TARGET
     rm $OVERLAY_TARGET.idsig
 done
