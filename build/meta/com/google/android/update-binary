@@ -310,7 +310,6 @@ if [ -n "$PRODUCT_BLOCK" ]; then
     rm -rf "/product/priv-app/TVLauncherNoGMS"
     rm -rf "/product/priv-app/TVRecommendationsNoGMS"
   fi
-  rm -rf "/priv-app/PackageInstaller"
 else
   if [ -f "${SYSTEM_OUT}/product/priv-app/TVLauncher/TVLauncher.apk" ]; then
     rm -rf "${SYSTEM_OUT}/product/priv-app/TVLauncherNoGMS"

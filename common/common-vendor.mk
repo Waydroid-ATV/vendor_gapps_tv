@@ -20,7 +20,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     GoogleExtShared \
-    GooglePackageInstaller \
     GoogleCalendarSyncAdapter \
     GoogleTTS \
     talkback \
