@@ -315,7 +315,6 @@ else
     rm -rf "${SYSTEM_OUT}/product/priv-app/TVLauncherNoGMS"
     rm -rf "${SYSTEM_OUT}/product/priv-app/TVRecommendationsNoGMS"
   fi
-  rm -rf "${SYSTEM_OUT}/priv-app/PackageInstaller"
 fi
 
 cleanup
