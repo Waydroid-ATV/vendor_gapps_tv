@@ -8,7 +8,7 @@
 #
 DATE=$(date -u +%Y%m%d_%H%M%S)
 export GAPPS_TOP=$(realpath .)
-ANDROIDV=13.0.0
+ANDROIDV=14.0.0
 SDKV=33
 GARCH=$1
 CPUARCH=$GARCH
