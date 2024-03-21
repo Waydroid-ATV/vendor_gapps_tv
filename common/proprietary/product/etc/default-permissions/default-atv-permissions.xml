@@ -40,4 +40,8 @@
         <permission name="android.permission.BLUETOOTH_SCAN" fixed="false" />
     </exception>
 
+    <exception package="com.google.android.tv.dfuservice">
+        <permission name="android.permission.BLUETOOTH_CONNECT" fixed="false" />
+    </exception>
+
 </exceptions>

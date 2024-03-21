@@ -17,6 +17,7 @@ product/etc/sysconfig/google_atv.xml
 
 -product/priv-app/AtvRemoteService/AtvRemoteService.apk;PRESIGNED
 -product/priv-app/Backdrop/Backdrop.apk;PRESIGNED
+-product/priv-app/DfuService/DfuService.apk;PRESIGNED
 -product/priv-app/GoogleOneTimeInitializer/GoogleOneTimeInitializer.apk;PRESIGNED
 -product/priv-app/Katniss/Katniss.apk;PRESIGNED
 -product/priv-app/SetupWraithPrebuilt/SetupWraithPrebuilt.apk;PRESIGNED

@@ -27,10 +27,12 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.WRITE_EMBEDDED_SUBSCRIPTIONS"/>
         <permission name="android.permission.SET_WALLPAPER_COMPONENT"/>
         <permission name="android.permission.SET_WALLPAPER_DIM_AMOUNT"/>
+        <permission name="android.permission.READ_WALLPAPER_INTERNAL" />
         <permission name="android.permission.LOCATION_HARDWARE"/>
         <permission name="android.permission.ACCESS_CONTEXT_HUB"/>
         <permission name="android.permission.REGISTER_STATS_PULL_ATOM"/>
         <permission name="android.permission.REQUEST_NETWORK_SCORES"/>
+        <permission name="android.permission.ACCESS_AMBIENT_CONTEXT_EVENT"/>
     </privapp-permissions>
 
     <privapp-permissions package="com.android.settings">
@@ -82,7 +84,6 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.MANAGE_USERS"/>
         <permission name="android.permission.MASTER_CLEAR"/>
         <permission name="android.permission.READ_DREAM_STATE"/>
-        <permission name="android.permission.READ_LOGS"/>
         <permission name="android.permission.READ_NETWORK_USAGE_HISTORY"/>
         <permission name="android.permission.REBOOT"/>
         <permission name="android.permission.RECEIVE_DATA_ACTIVITY_CHANGE"/>
@@ -113,6 +114,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.SET_WALLPAPER_COMPONENT"/>
         <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
         <permission name="android.permission.MODIFY_DAY_NIGHT_MODE"/>
+        <permission name="android.permission.CUSTOMIZE_SYSTEM_UI"/>
     </privapp-permissions>
 
     <privapp-permissions package="com.google.android.feedback">
@@ -134,6 +136,13 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.SHUTDOWN"/>
         <permission name="android.permission.START_ACTIVITIES_FROM_BACKGROUND"/>
         <permission name="android.permission.DISPATCH_PROVISIONING_MESSAGE"/>
+        <permission name="android.permission.SCHEDULE_EXACT_ALARM"/>
+    </privapp-permissions>
+
+    <privapp-permissions package="com.google.android.lily.setupwizard">
+        <permission name="android.permission.CHANGE_CONFIGURATION"/>
+        <permission name="android.permission.MANAGE_USERS"/>
+        <permission name="android.permission.STATUS_BAR"/>
     </privapp-permissions>
 
     <privapp-permissions package="com.google.android.grilservice">
@@ -174,6 +183,13 @@ It allows additional grants on top of privapp-permissions-platform.xml
     <privapp-permissions package="com.android.hbmsvmanager">
         <permission name="android.permission.INTERACT_ACROSS_USERS_FULL"/>
         <permission name="android.permission.MANAGE_USERS"/>
+        <permission name="android.permission.ACCESS_CONTEXT_HUB"/>
+    </privapp-permissions>
+
+    <privapp-permissions package="com.android.pixeldisplayservice">
+        <permission name="android.permission.INTERACT_ACROSS_USERS_FULL"/>
+        <permission name="android.permission.MANAGE_USERS"/>
+        <permission name="android.permission.ACCESS_CONTEXT_HUB"/>
     </privapp-permissions>
 
     <privapp-permissions package="com.google.oslo">
@@ -203,6 +219,12 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.RECEIVE_BOOT_COMPLETED"/>
     </privapp-permissions>
 
+    <privapp-permissions package="com.google.android.docksetup">
+        <permission name="android.permission.SHOW_KEYGUARD_MESSAGE"/>
+        <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+        <permission name="android.permission.START_ACTIVITIES_FROM_BACKGROUND"/>
+    </privapp-permissions>
+
     <privapp-permissions package="com.google.android.uvexposurereporter">
         <permission name="android.permission.ACCESS_CONTEXT_HUB"/>
         <permission name="android.permission.RECEIVE_BOOT_COMPLETED"/>
@@ -217,4 +239,9 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.BATTERY_STATS"/>
         <permission name="android.permission.DUMP"/>
     </privapp-permissions>
+
+    <privapp-permissions package="com.google.android.apps.nest.castauth">
+        <permission name="android.permission.QUERY_USERS"/>
+    </privapp-permissions>
+
 </permissions>

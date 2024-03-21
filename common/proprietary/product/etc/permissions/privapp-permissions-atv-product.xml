@@ -16,7 +16,12 @@
   -->
 
 <permissions>
-    <privapp-permissions package="com.google.android.tv.axel">
+  <privapp-permissions package="com.google.android.tv.dfuservice">
+        <permission name="android.permission.BLUETOOTH_PRIVILEGED"/>
+        <permission name="android.permission.START_ACTIVITIES_FROM_BACKGROUND" />
+  </privapp-permissions>
+
+  <privapp-permissions package="com.google.android.tv.axel">
         <permission name="android.permission.HDMI_CEC" />
         <permission name="android.permission.MEDIA_CONTENT_CONTROL" />
         <permission name="android.permission.MODIFY_AUDIO_ROUTING" />
@@ -39,6 +44,7 @@
         <permission name="android.permission.READ_DREAM_STATE" />
         <permission name="android.permission.READ_EXTERNAL_STORAGE"/>
         <permission name="android.permission.READ_LOGS"/>
+        <permission name="android.permission.SET_LOW_POWER_STANDBY_PORTS" />
         <permission name="android.permission.START_ACTIVITIES_FROM_BACKGROUND" />
         <permission name="android.permission.START_FOREGROUND_SERVICES_FROM_BACKGROUND" />
         <permission name="android.permission.TV_VIRTUAL_REMOTE_CONTROLLER"/>
@@ -74,9 +80,11 @@
         <permission name="android.permission.HDMI_CEC"/>
         <permission name="android.permission.INTERACT_ACROSS_USERS"/>
         <permission name="android.permission.LOCAL_MAC_ADDRESS"/>
+        <permission name="android.permission.MANAGE_USERS"/>
         <permission name="android.permission.MEDIA_CONTENT_CONTROL"/>
         <permission name="android.permission.MODIFY_AUDIO_ROUTING"/>
         <permission name="android.permission.PACKAGE_USAGE_STATS"/>
+        <permission name="android.permission.SET_LOW_POWER_STANDBY_PORTS"/>
         <permission name="android.permission.START_ACTIVITIES_FROM_BACKGROUND"/>
         <permission name="android.permission.USER_ACTIVITY"/>
         <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
@@ -96,6 +104,7 @@
         <permission name="android.permission.GET_ACCOUNTS_PRIVILEGED"/>
         <permission name="android.permission.GLOBAL_SEARCH"/>
         <permission name="android.permission.HDMI_CEC"/>
+        <permission name="android.permission.MANAGE_LOW_POWER_STANDBY"/>
         <permission name="android.permission.MANAGE_VOICE_KEYPHRASES"/>
         <permission name="android.permission.MASTER_CLEAR"/>
         <permission name="android.permission.MEDIA_CONTENT_CONTROL"/>
@@ -104,6 +113,7 @@
         <permission name="android.permission.REAL_GET_TASKS"/>
         <permission name="android.permission.STATUS_BAR"/>
         <permission name="android.permission.STOP_APP_SWITCHES"/>
+        <permission name="android.permission.TURN_SCREEN_ON"/>
         <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
         <deny-permission name="android.permission.UPDATE_APP_OPS_STATS"/>
     </privapp-permissions>
@@ -119,9 +129,11 @@
 
     <privapp-permissions package="com.google.android.tvrecommendations">
         <permission name="android.permission.DELETE_PACKAGES" />
+        <permission name="android.permission.DUMP" />
         <permission name="android.permission.GET_ACCOUNTS_PRIVILEGED" />
         <permission name="android.permission.INSTALL_PACKAGES" />
         <permission name="android.permission.MEDIA_CONTENT_CONTROL" />
+        <permission name="android.permission.READ_LOGS" />
         <permission name="android.permission.REAL_GET_TASKS" />
         <permission name="android.permission.RECEIVE_MEDIA_RESOURCE_USAGE" />
         <permission name="android.permission.START_ACTIVITIES_FROM_BACKGROUND" />
@@ -153,6 +165,7 @@
         <permission name="android.permission.WRITE_DREAM_STATE"/>
         <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
         <permission name="android.permission.REQUEST_NETWORK_SCORES"/>
+        <permission name="android.permission.MANAGE_LOW_POWER_STANDBY"/>
         <deny-permission name="android.permission.CONNECTIVITY_INTERNAL"/>
         <deny-permission name="android.permission.TETHER_PRIVILEGED"/>
     </privapp-permissions>

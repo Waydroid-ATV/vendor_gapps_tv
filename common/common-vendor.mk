@@ -25,6 +25,7 @@ PRODUCT_PACKAGES += \
     talkback \
     AtvRemoteService \
     Backdrop \
+    DfuService \
     GoogleOneTimeInitializer \
     Katniss \
     SetupWraithPrebuilt \
