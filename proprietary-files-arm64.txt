@@ -1,2 +1,3 @@
 -product/priv-app/AndroidMediaShell/AndroidMediaShell.apk;PRESIGNED
 -product/priv-app/PrebuiltGmsCorePano/PrebuiltGmsCorePano.apk;PRESIGNED
+-product/priv-app/Tubesky/Tubesky.apk;PRESIGNED

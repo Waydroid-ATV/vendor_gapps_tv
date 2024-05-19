@@ -29,7 +29,6 @@ PRODUCT_PACKAGES += \
     GoogleOneTimeInitializer \
     Katniss \
     SetupWraithPrebuilt \
-    Tubesky \
     GoogleFeedback \
     GoogleServicesFramework
 

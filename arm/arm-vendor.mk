@@ -8,6 +8,7 @@ PRODUCT_SOONG_NAMESPACES += \
 
 PRODUCT_PACKAGES += \
     AndroidMediaShell \
-    PrebuiltGmsCorePano
+    PrebuiltGmsCorePano \
+    Tubesky
 
 $(call inherit-product, vendor/gapps_tv/common/common-vendor.mk)
