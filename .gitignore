@@ -3,6 +3,7 @@ out/
 
 # rro build artifacts
 overlay/**/build/
+overlay/ATVOverlay/dist/ATVOverlay.apk
 
 # gapps log
 gapps_log
