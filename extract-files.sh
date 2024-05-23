@@ -46,4 +46,18 @@ setup_vendor "$GAPPS_COMMON" "$VENDOR" "$ANDROID_ROOT"
 
 extract "$MY_DIR"/proprietary-files-common.txt "$SRC"
 
+export ARM_DEVICE=arm
+export VENDOR=gapps_tv
+. "$HELPER"
+setup_vendor "$ARM_DEVICE" "$VENDOR" "$ANDROID_ROOT"
+extract "$MY_DIR"/proprietary-files-arm.txt "$SRC"
+extract "$MY_DIR"/proprietary-files-arm-full.txt "$SRC"
+
+export ARM64_DEVICE=arm64
+export VENDOR=gapps_tv
+. "$HELPER"
+setup_vendor "$ARM64_DEVICE" "$VENDOR" "$ANDROID_ROOT"
+extract "$MY_DIR"/proprietary-files-arm64.txt "$SRC"
+extract "$MY_DIR"/proprietary-files-arm64-full.txt "$SRC"
+
 "$MY_DIR"/setup-makefiles.sh

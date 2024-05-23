@@ -95,6 +95,11 @@
         service="com.google.android.gms/.backup.BackupTransportService" />
     <backup-transport-whitelisted-service
         service="com.google.android.gms/.backup.component.D2dTransportService" />
+    <backup-transport-whitelisted-service
+        service="com.google.android.apps.restore/.transport.BackupTransportService" />
+    <backup-transport-whitelisted-service
+        service="com.google.android.apps.restore/.transport.D2dTransportService" />
+
 
     <!-- Specify the explicit set of other applications that AI services are allowed to
          interact with, including the providers that back the implementation of the APIs
@@ -105,13 +110,16 @@
     <allow-association target="com.google.android.as" allowed="com.android.providers.media" />
     <allow-association target="com.google.android.as" allowed="com.android.providers.telephony" />
     <allow-association target="com.google.android.as" allowed="com.android.systemui" />
+    <allow-association target="com.google.android.as" allowed="com.google.android.bluetooth" />
     <allow-association target="com.google.android.as" allowed="com.google.android.bluetooth.services" />
     <allow-association target="com.google.android.as" allowed="com.google.android.providers.media.module" />
     <!-- AI services can bind to its open-source network component. -->
     <allow-association target="com.google.android.as" allowed="com.google.android.as.oss" />
 
-    <!-- AI services open-source network component can only bind back to the core package. -->
+    <!-- AI services open-source network component can bind back to the core package. -->
     <allow-association target="com.google.android.as.oss" allowed="com.google.android.as" />
+    <!-- AI services open-source network component can bind to AI Core. -->
+    <allow-association target="com.google.android.as.oss" allowed="com.google.android.aicore" />
 
     <!-- Specify the explicit set of other applications whose app data directories are
         accessible by other applications. -->
@@ -119,4 +127,12 @@
 
     <!-- Whitelist of packages that eligible for rollback -->
     <rollback-whitelisted-app package="com.android.vending" />
+    <rollback-whitelisted-app package="com.google.android.gms" />
+
+    <!-- Specify the installer eligiable for updating the given GMS package. -->
+    <update-ownership package="com.google.android.gms" installer="com.android.vending" />
+
+    <!-- Denylist of packages that are not eligible for automatic rollback -->
+    <automatic-rollback-denylisted-app package="com.android.vending" />
+    <automatic-rollback-denylisted-app package="com.google.android.gms" />
 </config>

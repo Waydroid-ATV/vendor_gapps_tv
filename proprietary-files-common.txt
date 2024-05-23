@@ -1,34 +1,24 @@
 # product
--product/app/GoogleCalendarSyncAdapter/GoogleCalendarSyncAdapter.apk;PRESIGNED
--product/app/GoogleTTS/GoogleTTS.apk;PRESIGNED
--product/app/talkback/talkback.apk;PRESIGNED
+etc/default-permissions/default-atv-permissions.xml:product/etc/default-permissions/default-atv-permissions.xml
 
-product/etc/default-permissions/default-atv-permissions.xml
+product/etc/init/gapps.rc|2b4c576d93aa6317c3a079dee292678e3ba114f1
 
-product/etc/init/gapps.rc|1b9e076965fe08a03cf90fed0e96f2aa4ac90c0e
+etc/permissions/privapp-permissions-google-product.xml:product/etc/permissions/privapp-permissions-google-product.xml
+etc/permissions/privapp-permissions-atv-product.xml:product/etc/permissions/privapp-permissions-atv-product.xml
+etc/permissions/split-permissions-google.xml:product/etc/permissions/split-permissions-google.xml
+etc/sysconfig/google-hiddenapi-package-whitelist.xml:product/etc/sysconfig/google-hiddenapi-package-whitelist.xml
+etc/sysconfig/google-staged-installer-whitelist.xml:product/etc/sysconfig/google-staged-installer-whitelist.xml
+etc/sysconfig/google.xml:product/etc/sysconfig/google.xml
+etc/sysconfig/google_atv.xml:product/etc/sysconfig/google_atv.xml
 
-product/etc/permissions/privapp-permissions-google-p.xml
-product/etc/permissions/privapp-permissions-atv-product.xml
-product/etc/permissions/split-permissions-google.xml
-product/etc/sysconfig/google-hiddenapi-package-whitelist.xml
-product/etc/sysconfig/google-staged-installer-whitelist.xml
-product/etc/sysconfig/google.xml
-product/etc/sysconfig/google_atv.xml
-
--product/priv-app/AtvRemoteService/AtvRemoteService.apk;PRESIGNED
--product/priv-app/Backdrop/Backdrop.apk;PRESIGNED
--product/priv-app/DfuService/DfuService.apk;PRESIGNED
--product/priv-app/GoogleOneTimeInitializer/GoogleOneTimeInitializer.apk;PRESIGNED
--product/priv-app/Katniss/Katniss.apk;PRESIGNED
--product/priv-app/SetupWraithPrebuilt/SetupWraithPrebuilt.apk;PRESIGNED
+apps/armeabi-v7a/AtvRemoteService.apk:product/priv-app/AtvRemoteService/AtvRemoteService.apk;PRESIGNED
+apps/armeabi-v7a/Backdrop.apk:product/priv-app/Backdrop/Backdrop.apk;PRESIGNED
+apps/armeabi-v7a/DfuService.apk:product/priv-app/DfuService/DfuService.apk;PRESIGNED
+apps/armeabi-v7a/Katniss.apk:product/priv-app/Katniss/Katniss.apk;PRESIGNED
+apps/armeabi-v7a/SetupWraithPrebuilt.apk:product/priv-app/SetupWraithPrebuilt/SetupWraithPrebuilt.apk;PRESIGNED
 
 # system
--system/app/GoogleExtShared/GoogleExtShared.apk;PRESIGNED
-
-system/etc/permissions/privapp-permissions-google.xml:system/etc/permissions/privapp-permissions-google-system.xml
+etc/permissions/privapp-permissions-google-system.xml:system/etc/permissions/privapp-permissions-google-system.xml
 
 # system_ext
-system_ext/etc/permissions/privapp-permissions-google-se.xml
-
--system_ext/priv-app/GoogleFeedback/GoogleFeedback.apk;PRESIGNED
--system_ext/priv-app/GoogleServicesFramework/GoogleServicesFramework.apk;PRESIGNED
+etc/permissions/privapp-permissions-google-system_ext.xml:system_ext/etc/permissions/privapp-permissions-google-system_ext.xml

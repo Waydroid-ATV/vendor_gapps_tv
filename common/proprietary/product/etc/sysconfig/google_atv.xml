@@ -24,9 +24,13 @@
     <bugreport-whitelisted package="com.google.android.apps.mediashell" />
     <!-- Enable Mediashell so this device can act as a Google Cast receiver. -->
     <feature name="com.google.android.software.cast_receiver" />
+    <!-- Enable Mediashell multiprocess -->
+    <feature name="com.google.android.apps.mediashell.cast_core" />
 
     <!-- Enable Katniss to handle intents for the Assistant domain. -->
     <app-link package="com.google.android.katniss" />
     <!-- Enable TvLauncherX to handle intents for surveys in the Google domain. -->
     <app-link package="com.google.android.apps.tv.launcherx" />
+    <!-- Allowlist TvRecommendations to use the bugreport API -->
+    <bugreport-whitelisted package="com.google.android.tvrecommendations" />
 </config>

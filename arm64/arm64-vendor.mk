@@ -7,8 +7,22 @@ PRODUCT_SOONG_NAMESPACES += \
 
 
 PRODUCT_PACKAGES += \
+    GoogleExtShared \
+    GoogleCalendarSyncAdapter \
+    GoogleTTS \
+    talkback \
     AndroidMediaShell \
+    GoogleOneTimeInitializer \
     PrebuiltGmsCorePano \
-    Tubesky
+    Tubesky \
+    GoogleFeedback \
+    GoogleServicesFramework
+
+ifneq ($(GMS_VARIANT),minimal)
+
+PRODUCT_PACKAGES += \
+    TVLauncher \
+    TVRecommendations
+endif
 
 $(call inherit-product, vendor/gapps_tv/common/common-vendor.mk)
