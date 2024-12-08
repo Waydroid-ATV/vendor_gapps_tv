@@ -4,6 +4,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter arm arm64,$(TARGET_ARCH)),)
+ifneq ($(filter x86,$(TARGET_ARCH)),)
 
 endif

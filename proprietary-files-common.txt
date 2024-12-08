@@ -19,7 +19,6 @@ product/etc/sysconfig/google_atv.xml
 -product/priv-app/Backdrop/Backdrop.apk;PRESIGNED
 -product/priv-app/GoogleOneTimeInitializer/GoogleOneTimeInitializer.apk;PRESIGNED
 -product/priv-app/Katniss/Katniss.apk;PRESIGNED
--product/priv-app/SetupWraithPrebuilt/SetupWraithPrebuilt.apk;PRESIGNED
 -product/priv-app/Tubesky/Tubesky.apk;PRESIGNED
 
 # system
