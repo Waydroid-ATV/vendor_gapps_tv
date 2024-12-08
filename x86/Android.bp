@@ -20,7 +20,7 @@ android_app_import {
 android_app_import {
 	name: "PrebuiltGmsCorePano",
 	owner: "gapps_tv",
-	apk: "proprietary/product/priv-app/PrebuiltGmsCorePano/PrebuiltGmsCorePano.apk",
+	apk: "proprietary/product/priv-app/PrebuiltGmsCore/PrebuiltGmsCorePano.apk",
 	presigned: true,
 	dex_preopt: {
 		enabled: false,

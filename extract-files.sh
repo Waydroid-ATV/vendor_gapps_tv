@@ -45,5 +45,7 @@ fi
 setup_vendor "$GAPPS_COMMON" "$VENDOR" "$ANDROID_ROOT"
 
 extract "$MY_DIR"/proprietary-files-common.txt "$SRC"
+extract "$MY_DIR"/proprietary-files-common-full.txt "$SRC"
+extract "$MY_DIR"/proprietary-files-x86.txt "$SRC"
 
 "$MY_DIR"/setup-makefiles.sh

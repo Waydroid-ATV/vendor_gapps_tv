@@ -20,15 +20,12 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     GoogleExtShared \
-    GoogleCalendarSyncAdapter \
     GoogleTTS \
     talkback \
     AtvRemoteService \
     Backdrop \
-    GoogleOneTimeInitializer \
     Katniss \
     Tubesky \
-    GoogleFeedback \
     GoogleServicesFramework
 
 ifneq ($(GMS_VARIANT),minimal)

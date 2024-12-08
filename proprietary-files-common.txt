@@ -1,5 +1,4 @@
 # product
--product/app/GoogleCalendarSyncAdapter/GoogleCalendarSyncAdapter.apk;PRESIGNED
 -product/app/GoogleTTS/GoogleTTS.apk;PRESIGNED
 -product/app/talkback/talkback.apk;PRESIGNED
 
@@ -17,7 +16,6 @@ product/etc/sysconfig/google_atv.xml
 
 -product/priv-app/AtvRemoteService/AtvRemoteService.apk;PRESIGNED
 -product/priv-app/Backdrop/Backdrop.apk;PRESIGNED
--product/priv-app/GoogleOneTimeInitializer/GoogleOneTimeInitializer.apk;PRESIGNED
 -product/priv-app/Katniss/Katniss.apk;PRESIGNED
 -product/priv-app/Tubesky/Tubesky.apk;PRESIGNED
 
@@ -29,5 +27,4 @@ system/etc/permissions/privapp-permissions-google.xml:system/etc/permissions/pri
 # system_ext
 system_ext/etc/permissions/privapp-permissions-google-se.xml
 
--system_ext/priv-app/GoogleFeedback/GoogleFeedback.apk;PRESIGNED
 -system_ext/priv-app/GoogleServicesFramework/GoogleServicesFramework.apk;PRESIGNED
