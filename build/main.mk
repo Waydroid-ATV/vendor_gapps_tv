@@ -24,3 +24,11 @@ gapps_tv_arm_minimal:
 gapps_tv_arm64_minimal:
 	@echo "Compiling GApps without GMS Launcher for arm64..."
 	@bash $(BUILD_GAPPS) arm64 minimal 2>&1
+
+gapps_tv_x86:
+	@echo "Compiling GApps for x86..."
+	@bash $(BUILD_GAPPS) x86 2>&1
+
+gapps_tv_x86_64:
+	@echo "Compiling GApps for x86_64..."
+	@bash $(BUILD_GAPPS) x86_64 2>&1
