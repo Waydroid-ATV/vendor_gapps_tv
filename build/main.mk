@@ -26,9 +26,9 @@ gapps_tv_arm64_minimal:
 	@bash $(BUILD_GAPPS) arm64 minimal 2>&1
 
 gapps_tv_x86:
-	@echo "Compiling GApps for x86..."
-	@bash $(BUILD_GAPPS) x86 2>&1
+	@echo "Compiling GApps with GMS launcher for x86..."
+	@bash $(BUILD_GAPPS) x86 full 2>&1
 
 gapps_tv_x86_64:
-	@echo "Compiling GApps for x86_64..."
-	@bash $(BUILD_GAPPS) x86_64 2>&1
+	@echo "Compiling GApps with GMS launcher for x86_64..."
+	@bash $(BUILD_GAPPS) x86_64 full 2>&1
